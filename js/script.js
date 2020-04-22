@@ -5,13 +5,14 @@ FSJS project 2 - List Filter and Pagination
 
 // Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
 
-//Global Variables
+//Global Variables - Students, Number of students of page, and the page container
  const studentListItems = document.querySelectorAll('.student-item');
  const numPerPage = 10;
  const pageContainer = document.querySelector('.page');
 
 
-//Figure Number of pages and Show Page Function
+//Figure Number of pages of 10 users to create and show function
+//Final problem was math logic in IF statment
  const showPage = (list, page) => {
    const startPage = (page * numPerPage) - numPerPage;
    const endPage = page * numPerPage;
@@ -25,14 +26,14 @@ FSJS project 2 - List Filter and Pagination
    }
  }
 
-//Div and item creation for each page
+//Creates page links and item creation for each page
  const pageinationLinks = (list) =>{
    const pageDiv = document.querySelector(".page");
    const pageNumber = list.length / numPerPage;
    const div = document.createElement('div');
    const ul = document.createElement('ul');
 
-
+   //appending div and list items to document
     div.className = "pagination";
     div.appendChild(ul);
     pageDiv.appendChild(div);
@@ -47,6 +48,7 @@ FSJS project 2 - List Filter and Pagination
       ul.appendChild(li);
     }
 
+//Shows page
 let a = ul.firstElementChild.firstElementChild;
 let tags = div.querySelectorAll("a");
 a.className = 'active';
