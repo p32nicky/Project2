@@ -11,20 +11,21 @@ FSJS project 2 - List Filter and Pagination
  const pageContainer = document.querySelector('.page');
 
 
-//Show Page Function
+//Figure Number of pages and Show Page Function
  const showPage = (list, page) => {
    const startPage = (page * numPerPage) - numPerPage;
    const endPage = page * numPerPage;
    for(i = 0; i<=list.length; i+= 1){
-      if(startPage >= list.length && list.length <= endPage){
+      if(i >= startPage && i <= endPage){
         studentListItems[i].style.display = 'block';
       }else{
-        studentListItems[i].style.display = '';
+        studentListItems[i].style.display = 'none';
 
       }
    }
  }
 
+//Div and item creation for each page
  const pageinationLinks = (list) =>{
    const pageDiv = document.querySelector(".page");
    const pageNumber = list.length / numPerPage;
@@ -36,7 +37,7 @@ FSJS project 2 - List Filter and Pagination
     div.appendChild(ul);
     pageDiv.appendChild(div);
 
-
+//Creates list items Appends Students to list
     for(links = 0; links < pageNumber; links +=1){
       let li = document.createElement('li');
       let a = document.createElement('a');
@@ -51,6 +52,8 @@ let tags = div.querySelectorAll("a");
 a.className = 'active';
 showPage(studentListItems, 1);
 
+
+//Click Handeler for new buttons - changes classname to active
 ul.addEventListener('click', () =>{
   for (button = 0; button < tags.length; button +=1){
     tags[button].className = "";
@@ -61,6 +64,7 @@ ul.addEventListener('click', () =>{
 });
 }
 
+//Calling function with student list items
 pageinationLinks(studentListItems);
 
 
