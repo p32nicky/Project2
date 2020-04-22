@@ -2,7 +2,7 @@ Team TreeHouse Project 2 List Pagination and Filtering
 
 For this project, we are basically working with an existing site that has a list of users and their data. We will be manipulating the DOM to show only 10 users on the page at one time. We will be adding navigator features at the bottom of the page. One set of student data will be 44 users in length, and the other at 64 to test my codes logic with multiple user amounts.
 
-Here is the description fromn the project site itself: https://teamtreehouse.com/projects/list-pagination-and-filtering In this project, you'll use a common web development technique known as "pagination" to enhance the usability of a web page.
+Here is the description from the project site itself: https://teamtreehouse.com/projects/list-pagination-and-filtering In this project, you'll use a common web development technique known as "pagination" to enhance the usability of a web page.
 
 You'll start with a page that contains a list of 54 student names, photos and email addresses. You'll write JavaScript to display 10 names at a time, and add a navigation system -- a series of links at the bottom of the page -- to let users click through the other student entries, 10 at a time.
 
